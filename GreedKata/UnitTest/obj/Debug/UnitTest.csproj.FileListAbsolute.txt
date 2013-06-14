@@ -1,0 +1,9 @@
+D:\Dev\GreedKata\GreedKata\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
+D:\Dev\GreedKata\GreedKata\UnitTest\bin\Debug\UnitTest.dll
+D:\Dev\GreedKata\GreedKata\UnitTest\bin\Debug\UnitTest.pdb
+D:\Dev\GreedKata\GreedKata\UnitTest\bin\Debug\GreedKata.dll
+D:\Dev\GreedKata\GreedKata\UnitTest\bin\Debug\nunit.framework.dll
+D:\Dev\GreedKata\GreedKata\UnitTest\bin\Debug\GreedKata.pdb
+D:\Dev\GreedKata\GreedKata\UnitTest\bin\Debug\nunit.framework.xml
+D:\Dev\GreedKata\GreedKata\UnitTest\obj\Debug\UnitTest.dll
+D:\Dev\GreedKata\GreedKata\UnitTest\obj\Debug\UnitTest.pdb
