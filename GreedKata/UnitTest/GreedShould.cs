@@ -12,7 +12,7 @@ namespace UnitTest
         //I think jumping in to actually counting a the 6's values would be moving too quick.
         //What are your thought
 
-        // Works for me!
+        // Works for me! 
         [Test]
         public void ReturnOneHundredPointsIfASingleOneIsScored()
         {
@@ -20,6 +20,17 @@ namespace UnitTest
             var expectedPoints = 100;
 
             var actualPoints = greed.GetTotalPoints(new List<int> {1, 2, 3, 4, 5});
+
+            Assert.AreEqual(expectedPoints, actualPoints);
+        }
+
+        [Test]
+        public void ReturnFiftyPointsIfASingleFiveIsScored()
+        {
+            var greed = new Greed();
+            var expectedPoints = 50;
+
+            var actualPoints = greed.GetTotalPoints(new List<int> { 1, 2, 3, 4, 5 });
 
             Assert.AreEqual(expectedPoints, actualPoints);
         }
