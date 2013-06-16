@@ -18,7 +18,7 @@ namespace UnitTest
         {
             _mockedDiceScorer = new Mock<IDiceScorer>();
             _greed = new Greed(_mockedDiceScorer.Object);
-            _dice = new List<int> { 0, 0, 0, 0, 0 };
+            _dice = new List<int> { 1, 0, 0, 0, 0 };
         }
 
         [Test]
@@ -54,6 +54,16 @@ namespace UnitTest
         }
 
         //Awesome! Should we make a "Comments" .txt file to keep a log of everything we talk about or just keep doing it this way?
-        //I like it this way. The log would lack context.
+        //I like it this way. The log would probably lack too much context.
+        [Test]
+        public void ReturnOneThousandAndFiftyWhenThreeOnesAndOneFiveIsRolled()
+        {
+            var expectedPoints = 1050;
+            _mockedDiceScorer.Setup(mds => mds.ScoreOnes(_dice)).Returns(1000);
+
+            var actualPoints = _greed.GetTotalPoints(_dice);
+
+            Assert.AreEqual(expectedPoints, actualPoints);
+        }
     }
 }
