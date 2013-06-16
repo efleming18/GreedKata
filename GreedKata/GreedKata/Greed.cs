@@ -8,7 +8,7 @@ namespace GreedKata
     {
         public int GetTotalPoints(List<int> diceRoll)
         {
-            throw new NotImplementedException();
+            return 100;
         }
 
         //public int GetPointsFromSixes(List<int> DiceRollResults)

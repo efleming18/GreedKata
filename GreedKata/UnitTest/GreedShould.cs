@@ -11,6 +11,8 @@ namespace UnitTest
         //Hey Rich, I think we need to start much smaller on this kata. Start with the most simple outcome/instruction and work our way up.
         //I think jumping in to actually counting a the 6's values would be moving too quick.
         //What are your thought
+
+        // Works for me!
         [Test]
         public void ReturnOneHundredPointsIfASingleOneIsScored()
         {
@@ -21,7 +23,6 @@ namespace UnitTest
 
             Assert.AreEqual(expectedPoints, actualPoints);
         }
-
         //public IEnumerable<TestCaseData> DiceResultsWithThreeOrMoreSixes
         //{
         //    get
@@ -33,7 +34,6 @@ namespace UnitTest
         //        yield return new TestCaseData(new List<int>{6,2,4,6,6});
         //    }
         //}
-
         //// If you can fix this on your refactor please do so!
         //// I wanted to use test case, but it seemed unhappy with me.
         //[TestCaseSource("DiceResultsWithThreeOrMoreSixes")]
@@ -41,11 +41,8 @@ namespace UnitTest
         //{
         //    var greed = new Greed();
         //    var expectedPoints = 600;
-
         //    var actualPoints = greed.GetPointsFromSixes(diceRollResults);
-
         //    Assert.AreEqual(expectedPoints, actualPoints);
-
         //}
     }
 }
