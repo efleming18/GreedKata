@@ -10,10 +10,5 @@ namespace GreedKata
         {
             return 100;
         }
-
-        //public int GetPointsFromSixes(List<int> DiceRollResults)
-        //{
-        //    throw new NotImplementedException();
-        //}
     }
 }
