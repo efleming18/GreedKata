@@ -19,7 +19,6 @@ namespace GreedKata
             {
                 return _diceScorer.ScoreOnes(diceRoll);
             }
-
             return 50;
         }
     }

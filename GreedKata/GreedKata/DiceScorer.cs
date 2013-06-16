@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace GreedKata
 {
@@ -7,8 +8,12 @@ namespace GreedKata
     {
         public int ScoreOnes(List<int> list)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            var numberOfOnes = list.Where(o => o.Equals(1)).Count();
+            if (numberOfOnes == 3)
+            {
+                return 1000;
+            }
+            return 100;
         }
     }
 }

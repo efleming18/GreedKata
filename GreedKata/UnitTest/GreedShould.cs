@@ -55,11 +55,12 @@ namespace UnitTest
 
         //Awesome! Should we make a "Comments" .txt file to keep a log of everything we talk about or just keep doing it this way?
         //I like it this way. The log would probably lack too much context.
+        //Agreed!
         [Test]
         public void ReturnOneThousandAndFiftyWhenThreeOnesAndOneFiveIsRolled()
         {
             var expectedPoints = 1050;
-            _mockedDiceScorer.Setup(mds => mds.ScoreOnes(_dice)).Returns(1000);
+            _mockedDiceScorer.Setup(mds => mds.ScoreOnes(_dice)).Returns(1050);
 
             var actualPoints = _greed.GetTotalPoints(_dice);
 
