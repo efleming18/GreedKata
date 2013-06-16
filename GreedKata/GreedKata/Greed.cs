@@ -6,9 +6,14 @@ namespace GreedKata
 {
     public class Greed
     {
-        public int GetPointsFromSixes(List<int> DiceRollResults)
+        public int GetTotalPoints(List<int> diceRoll)
         {
             throw new NotImplementedException();
         }
+
+        //public int GetPointsFromSixes(List<int> DiceRollResults)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }
