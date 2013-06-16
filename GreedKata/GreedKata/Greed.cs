@@ -6,7 +6,7 @@ namespace GreedKata
 {
     public class Greed
     {
-        private IDiceScorer _diceScorer;
+        private readonly IDiceScorer _diceScorer;
 
         public Greed(IDiceScorer diceScorer)
         {

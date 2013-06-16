@@ -11,23 +11,23 @@ namespace UnitTest
     {
         private Mock<IDiceScorer> _mockedDiceScorer;
         private Greed _greed;
+        private List<int> _dice;
 
         [SetUp]
         public void SetUp()
         {
             _mockedDiceScorer = new Mock<IDiceScorer>();
             _greed = new Greed(_mockedDiceScorer.Object);
+            _dice = new List<int> { 0, 0, 0, 0, 0 };
         }
 
         [Test]
         public void ReturnOneHundredPointsIfASingleOneIsScored()
         {
-            var hasOneOne = new List<int> { 1, 2, 3, 4, 5 };
             var expectedPoints = 100;
+            _mockedDiceScorer.Setup(mds => mds.ScoreOnes(_dice)).Returns(100);
 
-            _mockedDiceScorer.Setup(mds => mds.ScoreOnes(hasOneOne)).Returns(100);
-            
-            var actualPoints = _greed.GetTotalPoints(hasOneOne);
+            var actualPoints = _greed.GetTotalPoints(_dice);
 
             Assert.AreEqual(expectedPoints, actualPoints);
         }
@@ -35,10 +35,9 @@ namespace UnitTest
         [Test]
         public void ReturnFiftyPointsIfASingleFiveIsScored()
         {
-            var greed = new Greed(null);
             var expectedPoints = 50;
 
-            var actualPoints = greed.GetTotalPoints(new List<int> { 2, 2, 3, 4, 5 });
+            var actualPoints = _greed.GetTotalPoints(new List<int> { 2, 2, 3, 4, 5 });
 
             Assert.AreEqual(expectedPoints, actualPoints);
         }
@@ -46,12 +45,10 @@ namespace UnitTest
         [Test]
         public void ReturnOneThousandPointsIfTripleOnesIsScored()
         {
-            var hasThreeOnes = new List<int> { 1, 1, 1, 2, 3 };
             var expectedPoints = 1000;
+            _mockedDiceScorer.Setup(mds => mds.ScoreOnes(_dice)).Returns(1000);
 
-            _mockedDiceScorer.Setup(mds => mds.ScoreOnes(hasThreeOnes)).Returns(1000);
-
-            var actualPoints = _greed.GetTotalPoints(hasThreeOnes);
+            var actualPoints = _greed.GetTotalPoints(_dice);
 
             Assert.AreEqual(expectedPoints, actualPoints);
         }
