@@ -13,6 +13,7 @@ namespace UnitTest
         //What are your thought
 
         // Works for me! 
+        //Awesome! Should we make a "Comments" .txt file to keep a log of everything we talk about or just keep doing it this way?
         [Test]
         public void ReturnOneHundredPointsIfASingleOneIsScored()
         {
