@@ -35,5 +35,16 @@ namespace UnitTest
 
             Assert.AreEqual(expectedPoints, actualPoints);
         }
+
+        [Test]
+        public void ReturnOneThousandPointsIfTripleOnesIsScored()
+        {
+            var greed = new Greed();
+            var expectedPoints = 1000;
+
+            var actualPoints = greed.GetTotalPoints(new List<int> { 1, 1, 1, 2, 3 });
+
+            Assert.AreEqual(expectedPoints, actualPoints);
+        }
     }
 }
