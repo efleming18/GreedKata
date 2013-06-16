@@ -30,7 +30,7 @@ namespace UnitTest
             var greed = new Greed();
             var expectedPoints = 50;
 
-            var actualPoints = greed.GetTotalPoints(new List<int> { 1, 2, 3, 4, 5 });
+            var actualPoints = greed.GetTotalPoints(new List<int> { 2, 2, 3, 4, 5 });
 
             Assert.AreEqual(expectedPoints, actualPoints);
         }

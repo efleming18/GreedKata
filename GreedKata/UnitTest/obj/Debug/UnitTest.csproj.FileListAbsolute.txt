@@ -7,3 +7,12 @@ D:\Dev\GreedKata\GreedKata\UnitTest\bin\Debug\GreedKata.pdb
 D:\Dev\GreedKata\GreedKata\UnitTest\bin\Debug\nunit.framework.xml
 D:\Dev\GreedKata\GreedKata\UnitTest\obj\Debug\UnitTest.dll
 D:\Dev\GreedKata\GreedKata\UnitTest\obj\Debug\UnitTest.pdb
+C:\Users\Eric\Documents\GitHub\GreedKata\GreedKata\UnitTest\bin\Debug\UnitTest.dll
+C:\Users\Eric\Documents\GitHub\GreedKata\GreedKata\UnitTest\bin\Debug\UnitTest.pdb
+C:\Users\Eric\Documents\GitHub\GreedKata\GreedKata\UnitTest\bin\Debug\GreedKata.dll
+C:\Users\Eric\Documents\GitHub\GreedKata\GreedKata\UnitTest\bin\Debug\nunit.framework.dll
+C:\Users\Eric\Documents\GitHub\GreedKata\GreedKata\UnitTest\bin\Debug\GreedKata.pdb
+C:\Users\Eric\Documents\GitHub\GreedKata\GreedKata\UnitTest\bin\Debug\nunit.framework.xml
+C:\Users\Eric\Documents\GitHub\GreedKata\GreedKata\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
+C:\Users\Eric\Documents\GitHub\GreedKata\GreedKata\UnitTest\obj\Debug\UnitTest.dll
+C:\Users\Eric\Documents\GitHub\GreedKata\GreedKata\UnitTest\obj\Debug\UnitTest.pdb

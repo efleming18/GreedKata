@@ -8,7 +8,11 @@ namespace GreedKata
     {
         public int GetTotalPoints(List<int> diceRoll)
         {
-            return 100;
+            if (diceRoll.Contains(1))
+            {
+                return 100;
+            }
+            else return 50;
         }
     }
 }
