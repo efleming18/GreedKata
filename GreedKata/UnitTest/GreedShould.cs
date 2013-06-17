@@ -66,5 +66,18 @@ namespace UnitTest
 
             Assert.AreEqual(expectedPoints, actualPoints);
         }
+
+        [Test]
+        public void ReturnTwoHundreIfTripleTwosIsScored()
+        {
+            var expectedPoints = 200;
+            var testList = new List<int> { 2, 2, 2, 0, 0 };
+
+            _mockedDiceScorer.Setup(mds => mds.ScoreOnes(testList)).Returns(1050);
+
+            var actualPoints = _greed.GetTotalPoints(testList);
+
+            Assert.AreEqual(expectedPoints, actualPoints);
+        }
     }
 }
