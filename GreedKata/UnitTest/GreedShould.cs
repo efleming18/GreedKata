@@ -46,9 +46,9 @@ namespace UnitTest
         public void ReturnOneThousandPointsIfTripleOnesIsScored()
         {
             var expectedPoints = 1000;
-            _mockedDiceScorer.Setup(mds => mds.ScoreOnes(_dice)).Returns(1000);
+            _mockedDiceScorer.Setup(mds => mds.ScoreOnes(new List<int> { 1, 1, 1, 0, 0 })).Returns(1000);
 
-            var actualPoints = _greed.GetTotalPoints(_dice);
+            var actualPoints = _greed.GetTotalPoints(new List<int> { 1, 1, 1, 0, 0});
 
             Assert.AreEqual(expectedPoints, actualPoints);
         }
