@@ -32,6 +32,7 @@ namespace UnitTest
             Assert.AreEqual(expectedPoints, actualPoints);
         }
 
+        //Should this test be moved? And the rest of the tests moved/renamed to show that they are testing the mocks and not actual code? Thoughts?
         [Test]
         public void ReturnFiftyPointsIfASingleFiveIsScored()
         {
@@ -46,23 +47,22 @@ namespace UnitTest
         public void ReturnOneThousandPointsIfTripleOnesIsScored()
         {
             var expectedPoints = 1000;
-            _mockedDiceScorer.Setup(mds => mds.ScoreOnes(new List<int> { 1, 1, 1, 0, 0 })).Returns(1000);
+            _mockedDiceScorer.Setup(mds => mds.ScoreOnes(_dice)).Returns(1000);
 
-            var actualPoints = _greed.GetTotalPoints(new List<int> { 1, 1, 1, 0, 0});
+            var actualPoints = _greed.GetTotalPoints(_dice);
 
             Assert.AreEqual(expectedPoints, actualPoints);
         }
 
-        //Awesome! Should we make a "Comments" .txt file to keep a log of everything we talk about or just keep doing it this way?
-        //I like it this way. The log would probably lack too much context.
-        //Agreed!
         [Test]
         public void ReturnOneThousandAndFiftyWhenThreeOnesAndOneFiveIsRolled()
         {
             var expectedPoints = 1050;
-            _mockedDiceScorer.Setup(mds => mds.ScoreOnes(new List<int> { 1, 1, 1, 5, 2 })).Returns(1050);
+            _mockedDiceScorer.Setup(mds => mds.ScoreOnes(_dice)).Returns(1000);
+            //WHY WON'T THIS FREAKING LINE WORK!??!?!?!? FIX IT RICH!!
+            _mockedDiceScorer.Setup(mds => mds.ScoreFives(_dice)).Returns(50);
 
-            var actualPoints = _greed.GetTotalPoints(new List<int> { 1, 1, 1, 5, 2 });
+            var actualPoints = _greed.GetTotalPoints(_dice);
 
             Assert.AreEqual(expectedPoints, actualPoints);
         }
@@ -71,11 +71,10 @@ namespace UnitTest
         public void ReturnTwoHundreIfTripleTwosIsScored()
         {
             var expectedPoints = 200;
-            var testList = new List<int> { 2, 2, 2, 0, 0 };
 
-            _mockedDiceScorer.Setup(mds => mds.ScoreOnes(testList)).Returns(1050);
+            _mockedDiceScorer.Setup(mds => mds.ScoreOnes(_dice)).Returns(1050);
 
-            var actualPoints = _greed.GetTotalPoints(testList);
+            var actualPoints = _greed.GetTotalPoints(_dice);
 
             Assert.AreEqual(expectedPoints, actualPoints);
         }
