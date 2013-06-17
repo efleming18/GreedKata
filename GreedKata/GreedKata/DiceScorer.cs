@@ -8,17 +8,12 @@ namespace GreedKata
     {
         public int ScoreOnes(List<int> list)
         {
-            var numberOfOnes = list.Where(o => o.Equals(1)).Count();
-            if (numberOfOnes == 3)
-            {
-                return 1000;
-            }
-            return 100;
+            return 0;
         }
 
         public int ScoreFives(List<int> list)
         {
-            return 50;
+            return 0;
         }
     }
 }

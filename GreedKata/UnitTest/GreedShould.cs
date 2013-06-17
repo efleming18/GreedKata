@@ -21,17 +21,6 @@ namespace UnitTest
             _dice = new List<int> { 1, 0, 0, 0, 0 };
         }
 
-        [Test]
-        public void ReturnOneHundredPointsIfASingleOneIsScored()
-        {
-            var expectedPoints = 100;
-            _mockedDiceScorer.Setup(mds => mds.ScoreOnes(_dice)).Returns(100);
-
-            var actualPoints = _greed.GetTotalPoints(_dice);
-
-            Assert.AreEqual(expectedPoints, actualPoints);
-        }
-
         //Should this test be moved? And the rest of the tests moved/renamed to show that they are testing the mocks and not actual code? Thoughts?
         [Test]
         public void ReturnFiftyPointsIfASingleFiveIsScored()
@@ -39,6 +28,17 @@ namespace UnitTest
             var expectedPoints = 50;
 
             var actualPoints = _greed.GetTotalPoints(new List<int> { 2, 2, 3, 4, 5 });
+
+            Assert.AreEqual(expectedPoints, actualPoints);
+        }
+
+        [Test]
+        public void ReturnOneHundredPointsIfASingleOneIsScored()
+        {
+            var expectedPoints = 100;
+            _mockedDiceScorer.Setup(mds => mds.ScoreOnes(_dice)).Returns(100);
+
+            var actualPoints = _greed.GetTotalPoints(_dice);
 
             Assert.AreEqual(expectedPoints, actualPoints);
         }
@@ -60,6 +60,7 @@ namespace UnitTest
             var expectedPoints = 1050;
             _mockedDiceScorer.Setup(mds => mds.ScoreOnes(_dice)).Returns(1000);
             //WHY WON'T THIS FREAKING LINE WORK!??!?!?!? FIX IT RICH!!
+            //Welp....it works now and Idk why.... :(
             _mockedDiceScorer.Setup(mds => mds.ScoreFives(_dice)).Returns(50);
 
             var actualPoints = _greed.GetTotalPoints(_dice);
