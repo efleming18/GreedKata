@@ -15,5 +15,10 @@ namespace GreedKata
             }
             return 100;
         }
+
+        public int ScoreFives(List<int> list)
+        {
+            return 50;
+        }
     }
 }

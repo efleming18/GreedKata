@@ -17,7 +17,7 @@ namespace GreedKata
         {
             if (diceRoll.Contains(1))
             {
-                return _diceScorer.ScoreOnes(diceRoll);
+                return _diceScorer.ScoreOnes(diceRoll) + _diceScorer.ScoreFives(diceRoll);
             }
             return 50;
         }

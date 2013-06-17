@@ -60,9 +60,9 @@ namespace UnitTest
         public void ReturnOneThousandAndFiftyWhenThreeOnesAndOneFiveIsRolled()
         {
             var expectedPoints = 1050;
-            _mockedDiceScorer.Setup(mds => mds.ScoreOnes(_dice)).Returns(1050);
+            _mockedDiceScorer.Setup(mds => mds.ScoreOnes(new List<int> { 1, 1, 1, 5, 2 })).Returns(1050);
 
-            var actualPoints = _greed.GetTotalPoints(_dice);
+            var actualPoints = _greed.GetTotalPoints(new List<int> { 1, 1, 1, 5, 2 });
 
             Assert.AreEqual(expectedPoints, actualPoints);
         }
