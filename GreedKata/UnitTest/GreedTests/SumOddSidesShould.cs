@@ -22,21 +22,22 @@ namespace UnitTest.GreedTests
             _dice = new List<int> { 0, 0, 0, 0, 0 };
         }
 
-        //Should this test be moved? And the rest of the tests moved/renamed to show that they are testing the mocks and not actual code? Thoughts?
-        
-        //Good call! Yes, you are right.
         //If scoring changes so that a single five now returns 75 points, this test would still pass but would be incorrect.
         //So it should be closer to: 
                 //Given-FiftyPointsFromFivesAndZeroPointsFromOnes
                 //When-DiceAreRolled
                 //Then-ReturnFiftyPoints
         //Mind hitting the names with your next refactor?
+
+        //Hmm....these names are extremely long! Any way around this? Also, are the current names what you were after?
+        //I added in the mock for the ScoreThree method since this class is testing the SumOddSides (1, 3, and 5). Is this what you're thinking is right too?
         [Test]
-        public void ReturnFiftyPointsIfASingleFiveIsScored()
+        public void ReturnFiftyPointsFromFivesZeroPointsFromOnesAndZeroPointsFromThrees()
         {
             var expectedPoints = 50;
             _mockedDiceScorer.Setup(mds => mds.ScoreOnes(_dice)).Returns(0);
             _mockedDiceScorer.Setup(mds => mds.ScoreFives(_dice)).Returns(50);
+            _mockedDiceScorer.Setup(mds => mds.ScoreThrees(_dice)).Returns(0);
 
             var actualPoints = _greed.SumOddSides(_dice);
 
@@ -57,11 +58,12 @@ namespace UnitTest.GreedTests
         }
 
         [Test]
-        public void ReturnOneHundredPointsIfASingleOneIsScored()
+        public void ReturnOneHundredPointsFromOnesZeroPointsFromFivesAndZeroPointsFromThrees()
         {
             var expectedPoints = 100;
             _mockedDiceScorer.Setup(mds => mds.ScoreOnes(_dice)).Returns(100);
             _mockedDiceScorer.Setup(mds => mds.ScoreFives(_dice)).Returns(0);
+            _mockedDiceScorer.Setup(mds => mds.ScoreThrees(_dice)).Returns(0);
 
             var actualPoints = _greed.SumOddSides(_dice);
 
@@ -69,11 +71,12 @@ namespace UnitTest.GreedTests
         }
 
         [Test]
-        public void ReturnOneThousandPointsIfTripleOnesIsScored()
+        public void ReturnOneThousandPointsFromOnesZeroPointsFromFivesAndZeroPointsFromThrees()
         {
             var expectedPoints = 1000;
             _mockedDiceScorer.Setup(mds => mds.ScoreOnes(_dice)).Returns(1000);
             _mockedDiceScorer.Setup(mds => mds.ScoreFives(_dice)).Returns(0);
+            _mockedDiceScorer.Setup(mds => mds.ScoreThrees(_dice)).Returns(0);
 
             var actualPoints = _greed.SumOddSides(_dice);
 
@@ -81,11 +84,12 @@ namespace UnitTest.GreedTests
         }
 
         [Test]
-        public void ReturnOneThousandAndFiftyWhenThreeOnesAndOneFiveIsRolled()
+        public void ReturnOneThousandFromOnesFiftyFromFivesAndZeroFromThree()
         {
             var expectedPoints = 1050;
             _mockedDiceScorer.Setup(mds => mds.ScoreOnes(_dice)).Returns(1000);
             _mockedDiceScorer.Setup(mds => mds.ScoreFives(_dice)).Returns(50);
+            _mockedDiceScorer.Setup(mds => mds.ScoreThrees(_dice)).Returns(0);
 
             var actualPoints = _greed.SumOddSides(_dice);
 
