@@ -15,11 +15,11 @@ namespace GreedKata
 
         public int GetTotalPoints(List<int> diceRoll)
         {
-            if (diceRoll.Contains(1))
-            {
-                return _diceScorer.ScoreOnes(diceRoll) + _diceScorer.ScoreFives(diceRoll);
-            }
-            return 50;
+            var sum = 0;
+            sum += _diceScorer.ScoreOnes(diceRoll);
+            sum += _diceScorer.ScoreTwos(diceRoll);
+            sum += _diceScorer.ScoreFives(diceRoll);
+            return sum;
         }
     }
 }
