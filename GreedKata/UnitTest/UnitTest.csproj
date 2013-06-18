@@ -56,7 +56,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="GreedShould.cs" />
+    <Compile Include="GreedTests\SumEvenSidesShould.cs" />
+    <Compile Include="GreedTests\SumOddSidesShould.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
