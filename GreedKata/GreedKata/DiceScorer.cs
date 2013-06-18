@@ -16,6 +16,11 @@ namespace GreedKata
             // TODO: Implement this method
             throw new NotImplementedException();
         }
+
+        public int ScoreThrees(List<int> list)
+        {
+            throw new NotImplementedException();
+        }
         public int ScoreFives(List<int> list)
         {
             return 0;

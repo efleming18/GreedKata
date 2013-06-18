@@ -26,6 +26,7 @@ namespace GreedKata
         public int SumOddSides(List<int> diceRoll) 
         {
             var sum = _diceScorer.ScoreOnes(diceRoll);
+            sum += _diceScorer.ScoreThrees(diceRoll);
             return sum + _diceScorer.ScoreFives(diceRoll);
         }
     }
