@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using GreedKata;
 using Moq;
 using NUnit.Framework;
@@ -29,6 +27,17 @@ namespace UnitTest.GreedTests
         {
             var expectedPoints = 200;
             _mockDiceScorer.Setup(mds => mds.ScoreTwos(_dice)).Returns(200);
+
+            var actualPoints = _greed.SumEvenSides(_dice);
+
+            Assert.AreEqual(expectedPoints, actualPoints);
+        }
+
+        [Test]
+        public void ReturnFourHundredFromZeroTwosAndThreeFours()
+        {
+            var expectedPoints = 400;
+            _mockDiceScorer.Setup(mds => mds.ScoreTwos(_dice)).Returns(0);
 
             var actualPoints = _greed.SumEvenSides(_dice);
 
