@@ -29,7 +29,7 @@ namespace UnitTest.GreedTests
         //So it should be closer to: 
                 //Given-FiftyPointsFromFivesAndZeroPointsFromOnes
                 //When-DiceAreRolled
-                //Then-Return50Points
+                //Then-ReturnFiftyPoints
         //Mind hitting the names with your next refactor?
         [Test]
         public void ReturnFiftyPointsIfASingleFiveIsScored()
@@ -37,6 +37,18 @@ namespace UnitTest.GreedTests
             var expectedPoints = 50;
             _mockedDiceScorer.Setup(mds => mds.ScoreOnes(_dice)).Returns(0);
             _mockedDiceScorer.Setup(mds => mds.ScoreFives(_dice)).Returns(50);
+
+            var actualPoints = _greed.SumOddSides(_dice);
+
+            Assert.AreEqual(expectedPoints, actualPoints);
+        }
+
+        [Test]
+        public void Given300PointsFromThrees0PointsFromOnes0PointsFromFivesThenReturn300Points()
+        {
+            var expectedPoints = 300;
+            _mockedDiceScorer.Setup(mds => mds.ScoreOnes(_dice)).Returns(0);
+            _mockedDiceScorer.Setup(mds => mds.ScoreFives(_dice)).Returns(0);
 
             var actualPoints = _greed.SumOddSides(_dice);
 
