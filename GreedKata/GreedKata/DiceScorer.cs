@@ -43,6 +43,10 @@ namespace GreedKata
             throw new NotImplementedException();
         }
 
+        public int ScoreSixes()
+        {
+            throw new NotImplementedException();
+        }
         
     }
 }

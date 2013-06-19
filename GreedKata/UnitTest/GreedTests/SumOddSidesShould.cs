@@ -34,6 +34,8 @@ namespace UnitTest.GreedTests
 
         // Yes, and not really, which is why I used 300 instead of threehundered even though I like writing the word better.m
         // I do wish we could break up the method name onto multiple lines.
+
+        //That would be nice! Oh well, long names that fully describe our test are better than short obscure names I guess :)
         [Test]
         public void Given50PointsFromFivesAndZeroPointsFromThreeAndOnesThenScore50Points()
         {

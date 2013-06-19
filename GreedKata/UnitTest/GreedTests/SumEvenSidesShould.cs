@@ -48,9 +48,10 @@ namespace UnitTest.GreedTests
         [Test]
         public void Given600FromSixesAndZeroFromFoursAndZeroFromTwosThenReturn600()
         {
-            var expectedPoints = 400;
+            var expectedPoints = 600;
             _mockDiceScorer.Setup(mds => mds.ScoreTwos()).Returns(0);
             _mockDiceScorer.Setup(mds => mds.ScoreFours()).Returns(0);
+            _mockDiceScorer.Setup(mds => mds.ScoreSixes()).Returns(600);
 
             var actualPoints = _greed.SumEvenSides(_dice);
 
