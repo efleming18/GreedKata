@@ -46,7 +46,7 @@ namespace UnitTest.GreedTests
         }
 
         [Test]
-        public void Given600FromSixesAndZeroFromFoursAndZeroFromTwosThenReturn600()
+        public void ReturnSixHundredFromSixesZeroFromTwosAndZeroFromFours()
         {
             var expectedPoints = 600;
             _mockDiceScorer.Setup(mds => mds.ScoreTwos()).Returns(0);

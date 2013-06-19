@@ -8,9 +8,9 @@ namespace GreedKata
     {
         private readonly List<int> _diceToScore;
 
-        public DiceScorer(List<int> _diceToScore)
+        public DiceScorer(List<int> diceToScore)
         {
-            _diceToScore = _diceToScore;
+            _diceToScore = diceToScore;
         }
 
         public int ScoreFours()
@@ -45,6 +45,7 @@ namespace GreedKata
 
         public int ScoreSixes()
         {
+            // TODO: Implement this method
             throw new NotImplementedException();
         }
         
