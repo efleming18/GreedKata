@@ -20,15 +20,15 @@ namespace GreedKata
 
         public int SumEvenSides(List<int> diceRoll)
         {
-            var sum = _diceScorer.ScoreFours(diceRoll);
-            return sum += _diceScorer.ScoreTwos(diceRoll);
+            var sum = _diceScorer.ScoreFours();
+            return sum += _diceScorer.ScoreTwos();
         }
 
         public int SumOddSides(List<int> diceRoll) 
         {
-            var sum = _diceScorer.ScoreOnes(diceRoll);
-            sum += _diceScorer.ScoreThrees(diceRoll);
-            return sum + _diceScorer.ScoreFives(diceRoll);
+            var sum = _diceScorer.ScoreOnes();
+            sum += _diceScorer.ScoreThrees();
+            return sum + _diceScorer.ScoreFives();
         }
     }
 }

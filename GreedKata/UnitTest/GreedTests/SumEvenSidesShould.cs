@@ -26,7 +26,7 @@ namespace UnitTest.GreedTests
         public void ReturnTwoHundreIfTripleTwosIsScored()
         {
             var expectedPoints = 200;
-            _mockDiceScorer.Setup(mds => mds.ScoreTwos(_dice)).Returns(200);
+            _mockDiceScorer.Setup(mds => mds.ScoreTwos()).Returns(200);
 
             var actualPoints = _greed.SumEvenSides(_dice);
 
@@ -37,8 +37,8 @@ namespace UnitTest.GreedTests
         public void ReturnFourHundredFromZeroTwosAndThreeFours()
         {
             var expectedPoints = 400;
-            _mockDiceScorer.Setup(mds => mds.ScoreTwos(_dice)).Returns(0);
-            _mockDiceScorer.Setup(mds => mds.ScoreFours(_dice)).Returns(400);
+            _mockDiceScorer.Setup(mds => mds.ScoreTwos()).Returns(0);
+            _mockDiceScorer.Setup(mds => mds.ScoreFours()).Returns(400);
 
             var actualPoints = _greed.SumEvenSides(_dice);
 

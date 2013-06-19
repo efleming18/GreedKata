@@ -6,30 +6,43 @@ namespace GreedKata
 {
     public class DiceScorer : IDiceScorer
     {
-        public int ScoreFours(List<int> list)
+        private readonly List<int> _diceToScore;
+
+        public DiceScorer(List<int> _diceToScore)
+        {
+            _diceToScore = _diceToScore;
+        }
+
+        public int ScoreFours()
         {
             // TODO: Implement this method
             throw new NotImplementedException();
         }
 
-        public int ScoreOnes(List<int> list)
-        {
-            return 0;
-        }
-
-        public int ScoreTwos(List<int> list)
+        public int ScoreThrees()
         {
             // TODO: Implement this method
             throw new NotImplementedException();
         }
 
-        public int ScoreThrees(List<int> list)
+        public int ScoreTwos()
         {
+            // TODO: Implement this method
             throw new NotImplementedException();
         }
-        public int ScoreFives(List<int> list)
+
+        public int ScoreFives()
         {
-            return 0;
+            // TODO: Implement this method
+            throw new NotImplementedException();
         }
+
+        public int ScoreOnes()
+        {
+            // TODO: Implement this method
+            throw new NotImplementedException();
+        }
+
+        
     }
 }
