@@ -6,6 +6,8 @@ namespace GreedKata
     {
         //The "list" that these methods take in could use a better name I think! Something for your refactor step :)
 
+        int ScoreFours(List<int> list);
+
         int ScoreThrees(List<int> list);
 
         int ScoreTwos(List<int> list);

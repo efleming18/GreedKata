@@ -38,6 +38,7 @@ namespace UnitTest.GreedTests
         {
             var expectedPoints = 400;
             _mockDiceScorer.Setup(mds => mds.ScoreTwos(_dice)).Returns(0);
+            _mockDiceScorer.Setup(mds => mds.ScoreFours(_dice)).Returns(400);
 
             var actualPoints = _greed.SumEvenSides(_dice);
 
