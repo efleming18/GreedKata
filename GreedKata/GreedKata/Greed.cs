@@ -8,6 +8,9 @@ namespace GreedKata
     {
         private readonly IDiceScorer _diceScorer;
 
+        public Greed()
+        { }
+
         public Greed(IDiceScorer diceScorer)
         {
             _diceScorer = diceScorer;
