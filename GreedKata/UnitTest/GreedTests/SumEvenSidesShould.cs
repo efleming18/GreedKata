@@ -44,5 +44,17 @@ namespace UnitTest.GreedTests
 
             Assert.AreEqual(expectedPoints, actualPoints);
         }
+
+        [Test]
+        public void Given600FromSixesAndZeroFromFoursAndZeroFromTwosThenReturn600()
+        {
+            var expectedPoints = 400;
+            _mockDiceScorer.Setup(mds => mds.ScoreTwos()).Returns(0);
+            _mockDiceScorer.Setup(mds => mds.ScoreFours()).Returns(0);
+
+            var actualPoints = _greed.SumEvenSides(_dice);
+
+            Assert.AreEqual(expectedPoints, actualPoints);
+        }
     }
 }
