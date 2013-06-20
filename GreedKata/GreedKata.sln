@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreedKata", "GreedKata\Gree
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{98001C8D-996D-4EBA-A876-663E59A4B092}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcceptanceTests", "AcceptanceTests\AcceptanceTests.csproj", "{8D74426B-7535-4662-AC17-01A52FA40D93}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{98001C8D-996D-4EBA-A876-663E59A4B092}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98001C8D-996D-4EBA-A876-663E59A4B092}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98001C8D-996D-4EBA-A876-663E59A4B092}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D74426B-7535-4662-AC17-01A52FA40D93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D74426B-7535-4662-AC17-01A52FA40D93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D74426B-7535-4662-AC17-01A52FA40D93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D74426B-7535-4662-AC17-01A52FA40D93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
