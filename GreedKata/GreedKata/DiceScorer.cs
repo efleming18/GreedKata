@@ -8,6 +8,7 @@ namespace GreedKata
     {
         public int ScoreOnes(List<int> diceRoll)
         {
+            if (diceRoll.Count(die => die == 1) > 2) { return 1000; }
             var numberOfOnes = diceRoll.Count(dr => dr == 1);
             return numberOfOnes * 100;
         }
