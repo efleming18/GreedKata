@@ -8,6 +8,15 @@ namespace AcceptanceTests
     [TestFixture]
     public class ScoreOnes
     {
+        private Greed _greed;
+
+        [SetUp]
+        public void SetUp()
+        {
+            var diceScorer = new DiceScorer();
+            _greed = new Greed(diceScorer);
+        }
+
         //This could probably use a better name/be moved to another file?
         //Yes :)
         [Test]
@@ -15,10 +24,8 @@ namespace AcceptanceTests
         {
             var expectedPoints = 100;
             var testRoll = new List<int> { 1 };
-            var diceScorer = new DiceScorer();
-            var greed = new Greed(diceScorer);
 
-            var actualPoints = greed.GetTotalPoints(testRoll);
+            var actualPoints = _greed.GetTotalPoints(testRoll);
 
             Assert.AreEqual(expectedPoints, actualPoints);
         }
@@ -28,10 +35,8 @@ namespace AcceptanceTests
         {
             var expectedPoints = 200;
             var testRoll = new List<int> { 1, 1 };
-            var diceScorer = new DiceScorer();
-            var greed = new Greed(diceScorer);
 
-            var actualPoints = greed.GetTotalPoints(testRoll);
+            var actualPoints = _greed.GetTotalPoints(testRoll);
 
             Assert.AreEqual(expectedPoints, actualPoints);
         }
@@ -41,10 +46,8 @@ namespace AcceptanceTests
         {
             var expectedPoints = 1000;
             var testRoll = new List<int> { 1, 1, 1 };
-            var diceScorer = new DiceScorer();
-            var greed = new Greed(diceScorer);
 
-            var actualPoints = greed.GetTotalPoints(testRoll);
+            var actualPoints = _greed.GetTotalPoints(testRoll);
 
             Assert.AreEqual(expectedPoints, actualPoints);
         }
