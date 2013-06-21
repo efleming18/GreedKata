@@ -21,7 +21,8 @@ namespace GreedKata
 
         public int ScoreOnes(List<int> diceRoll)
         {
-            return 100;
+            var numberOfOnes = diceRoll.Count(dr => dr == 1);
+            return numberOfOnes * 100;
         }
 
         public int ScoreFours()
