@@ -22,20 +22,6 @@ namespace UnitTest.GreedTests
             _dice = new List<int> { 0, 0, 0, 0, 0 };
         }
 
-        //If scoring changes so that a single five now returns 75 points, this test would still pass but would be incorrect.
-        //So it should be closer to: 
-                //Given-FiftyPointsFromFivesAndZeroPointsFromOnes
-                //When-DiceAreRolled
-                //Then-ReturnFiftyPoints
-        //Mind hitting the names with your next refactor?
-
-        //Hmm....these names are extremely long! Any way around this? Also, are the current names what you were after?
-        //I added in the mock for the ScoreThree method since this class is testing the SumOddSides (1, 3, and 5). Is this what you're thinking is right too?
-
-        // Yes, and not really, which is why I used 300 instead of threehundered even though I like writing the word better.m
-        // I do wish we could break up the method name onto multiple lines.
-
-        //That would be nice! Oh well, long names that fully describe our test are better than short obscure names I guess :)
         [Test]
         public void Given50PointsFromFivesAndZeroPointsFromThreeAndOnesThenScore50Points()
         {

@@ -8,9 +8,6 @@ namespace GreedKata
     {
         private readonly IDiceScorer _diceScorer;
 
-        public Greed()
-        { }
-
         public Greed(IDiceScorer diceScorer)
         {
             _diceScorer = diceScorer;
@@ -18,7 +15,7 @@ namespace GreedKata
 
         public int GetTotalPoints(List<int> diceRoll)
         {
-            return 100;
+            return _diceScorer.ScoreOnes(diceRoll);
         }
 
         public int SumEvenSides(List<int> diceRoll)

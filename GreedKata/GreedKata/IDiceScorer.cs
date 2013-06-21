@@ -4,6 +4,8 @@ namespace GreedKata
 {
     public interface IDiceScorer
     {
+        int ScoreOnes(List<int> diceRoll);
+
         int ScoreSixes();
 
         int ScoreFours();

@@ -7,10 +7,21 @@ namespace GreedKata
     public class DiceScorer : IDiceScorer
     {
         private readonly List<int> _diceToScore;
+        
 
+        public DiceScorer()
+        { }
+
+        //yeah, I don't like passing this into the constructor anymore.
+        //That was dumbe.. boo me! :p (ps, twitter gem in there for ya)
         public DiceScorer(List<int> diceToScore)
         {
             _diceToScore = diceToScore;
+        }
+
+        public int ScoreOnes(List<int> diceRoll)
+        {
+            return 100;
         }
 
         public int ScoreFours()
