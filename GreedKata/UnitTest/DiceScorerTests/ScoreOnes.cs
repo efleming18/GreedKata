@@ -18,7 +18,7 @@ namespace UnitTest.DiceScorerTests
         }
 
         [Test]
-        public void GiveOneOne_ThenReturnOneHundredPoints()
+        public void GivenOneOne_ThenReturnOneHundredPoints()
         {
             var diceToScore = new List<int> {1, 0, 0, 0, 0};
             var actualScore = _diceScorer.ScoreOnes(diceToScore);
@@ -36,13 +36,23 @@ namespace UnitTest.DiceScorerTests
         }
 
         //I really like this naming convention for these tests. Very clear on what each test is actually testing. Good job!
+        //Excellent =D
         [Test]
-        public void GiveThreeOnes_ThenReturnOneThousandPoints()
+        public void GivenThreeOnes_ThenReturnOneThousandPoints()
         {
             var diceToScore = new List<int> { 1, 1, 1, 0, 0 };
             var actualScore = _diceScorer.ScoreOnes(diceToScore);
 
             Assert.AreEqual(1000, actualScore);
+        }
+
+        [Test]
+        public void GivenFourOnes_ThenReturnOneThousandOneHundredPoints()
+        {
+            var diceToScore = new List<int> { 1, 1, 1, 1, 0 };
+            var actualScore = _diceScorer.ScoreOnes(diceToScore);
+
+            Assert.AreEqual(1100, actualScore);
         }
     }
 }

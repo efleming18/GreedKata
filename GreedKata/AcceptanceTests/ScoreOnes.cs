@@ -17,8 +17,6 @@ namespace AcceptanceTests
             _greed = new Greed(diceScorer);
         }
 
-        //This could probably use a better name/be moved to another file?
-        //Yes :)
         [Test]
         public void GivenOnlyOneOne_WhenDiceAreRolled_ThenReturnOneHundredPoints()
         {
@@ -46,6 +44,19 @@ namespace AcceptanceTests
         {
             var expectedPoints = 1000;
             var testRoll = new List<int> { 1, 1, 1 };
+
+            var actualPoints = _greed.GetTotalPoints(testRoll);
+
+            Assert.AreEqual(expectedPoints, actualPoints);
+        }
+
+        //Since we switched to ATTD we shouldn't write any unit tests without a red accpetance test
+        //I think you are right though that we should write a red unit test before we declare the status red.
+        [Test]
+        public void GivenOnlyFourOnes_WhenDiceAreRolled_ThenReturnOneThousandOneHundredPoints()
+        {
+            var expectedPoints = 1100;
+            var testRoll = new List<int> { 1, 1, 1, 1 };
 
             var actualPoints = _greed.GetTotalPoints(testRoll);
 
