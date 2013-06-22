@@ -57,6 +57,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="DiceScorerTests\ScoreOnes.cs" />
+    <Compile Include="DiceScorerTests\ScoreThrees.cs" />
     <Compile Include="GreedTests\SumEvenSidesShould.cs" />
     <Compile Include="GreedTests\SumOddSidesShould.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
