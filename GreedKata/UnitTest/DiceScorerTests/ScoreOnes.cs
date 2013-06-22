@@ -35,8 +35,6 @@ namespace UnitTest.DiceScorerTests
             Assert.AreEqual(200, actualScore);
         }
 
-        //I really like this naming convention for these tests. Very clear on what each test is actually testing. Good job!
-        //Excellent =D
         [Test]
         public void GivenThreeOnes_ThenReturnOneThousandPoints()
         {
