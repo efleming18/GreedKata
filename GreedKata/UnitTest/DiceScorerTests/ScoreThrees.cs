@@ -18,5 +18,15 @@ namespace UnitTest.DiceScorerTests
 
             Assert.AreEqual(0, actualScore);
         }
+
+        [Test]
+        public void GivenThreeThrees_ThenReturnThreeHundredPoints()
+        {
+            var diceToScore = new List<int> { 3, 3, 3, 0, 0 };
+            var diceScorer = new DiceScorer();
+            var actualScore = diceScorer.ScoreThrees(diceToScore);
+
+            Assert.AreEqual(300, actualScore);
+        }
     }
 }
