@@ -14,7 +14,7 @@ namespace UnitTest.DiceScorerTests
         {
             var diceToScore = new List<int> { 3, 2, 4, 0, 0 };
             var diceScorer = new DiceScorer();
-            var actualScore = diceScorer.ScoreThrees();
+            var actualScore = diceScorer.ScoreThrees(diceToScore);
 
             Assert.AreEqual(0, actualScore);
         }

@@ -17,6 +17,11 @@ namespace GreedKata
             return numberOfOnes * 100;
         }
 
+        public int ScoreThrees(List<int> diceRoll)
+        {
+            return 0;
+        }
+
         public int ScoreFours()
         {
             // TODO: Implement this method
