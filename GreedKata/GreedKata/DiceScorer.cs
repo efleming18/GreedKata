@@ -43,7 +43,13 @@ namespace GreedKata
 
         public int ScoreThrees(List<int> diceRoll)
         {
-            return 0;
+            var numberOfThrees = diceRoll.Count(dr => dr == 3);
+            var total = 0;
+            if (numberOfThrees == 3)
+            {
+                total = numberOfThrees * 100;
+            }
+            return total;
         }
         
     }
