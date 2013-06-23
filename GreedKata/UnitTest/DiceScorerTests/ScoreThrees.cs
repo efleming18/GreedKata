@@ -9,12 +9,18 @@ namespace UnitTest.DiceScorerTests
     [TestFixture]
     class ScoreThrees
     {
+        private DiceScorer _diceScorer;
+
+        public void SetUp()
+        {
+            this._diceScorer = new DiceScorer();
+        }
+
         [Test]
         public void GivenOneThree_ThenReturnZeroPoints()
         {
             var diceToScore = new List<int> { 3, 2, 4, 0, 0 };
-            var diceScorer = new DiceScorer();
-            var actualScore = diceScorer.ScoreThrees(diceToScore);
+            var actualScore = _diceScorer.ScoreThrees(diceToScore);
 
             Assert.AreEqual(0, actualScore);
         }
@@ -23,8 +29,7 @@ namespace UnitTest.DiceScorerTests
         public void GivenThreeThrees_ThenReturnThreeHundredPoints()
         {
             var diceToScore = new List<int> { 3, 3, 3, 0, 0 };
-            var diceScorer = new DiceScorer();
-            var actualScore = diceScorer.ScoreThrees(diceToScore);
+            var actualScore = _diceScorer.ScoreThrees(diceToScore);
 
             Assert.AreEqual(300, actualScore);
         }
