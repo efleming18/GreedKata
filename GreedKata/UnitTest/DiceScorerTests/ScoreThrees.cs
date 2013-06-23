@@ -11,9 +11,10 @@ namespace UnitTest.DiceScorerTests
     {
         private DiceScorer _diceScorer;
 
+        [SetUp]
         public void SetUp()
         {
-            this._diceScorer = new DiceScorer();
+            _diceScorer = new DiceScorer();
         }
 
         [Test]
