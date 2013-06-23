@@ -26,9 +26,9 @@ namespace UnitTest.GreedTests
         public void Given50PointsFromFivesAndZeroPointsFromThreeAndOnesThenScore50Points()
         {
             var expectedPoints = 50;
-            _mockedDiceScorer.Setup(mds => mds.ScoreOnes()).Returns(0);
-            _mockedDiceScorer.Setup(mds => mds.ScoreFives()).Returns(50);
-            _mockedDiceScorer.Setup(mds => mds.ScoreThrees()).Returns(0);
+            _mockedDiceScorer.Setup(mds => mds.ScoreOnes(_dice)).Returns(0);
+            _mockedDiceScorer.Setup(mds => mds.ScoreFives(_dice)).Returns(50);
+            _mockedDiceScorer.Setup(mds => mds.ScoreThrees(_dice)).Returns(0);
 
             var actualPoints = _greed.SumOddSides(_dice);
 
@@ -39,9 +39,9 @@ namespace UnitTest.GreedTests
         public void Give300PointsFromThreesAndZeroPointsFromOnesAndFivesThenScore300Points()
         {
             var expectedPoints = 300;
-            _mockedDiceScorer.Setup(mds => mds.ScoreOnes()).Returns(0);
-            _mockedDiceScorer.Setup(mds => mds.ScoreThrees()).Returns(300);
-            _mockedDiceScorer.Setup(mds => mds.ScoreFives()).Returns(0);
+            _mockedDiceScorer.Setup(mds => mds.ScoreOnes(_dice)).Returns(0);
+            _mockedDiceScorer.Setup(mds => mds.ScoreThrees(_dice)).Returns(300);
+            _mockedDiceScorer.Setup(mds => mds.ScoreFives(_dice)).Returns(0);
 
             var actualPoints = _greed.SumOddSides(_dice);
 
@@ -52,9 +52,9 @@ namespace UnitTest.GreedTests
         public void Given100PointsFromOnesAndZeroPointsFromFivesAndThreesScore300Points()
         {
             var expectedPoints = 100;
-            _mockedDiceScorer.Setup(mds => mds.ScoreOnes()).Returns(100);
-            _mockedDiceScorer.Setup(mds => mds.ScoreFives()).Returns(0);
-            _mockedDiceScorer.Setup(mds => mds.ScoreThrees()).Returns(0);
+            _mockedDiceScorer.Setup(mds => mds.ScoreOnes(_dice)).Returns(100);
+            _mockedDiceScorer.Setup(mds => mds.ScoreFives(_dice)).Returns(0);
+            _mockedDiceScorer.Setup(mds => mds.ScoreThrees(_dice)).Returns(0);
 
             var actualPoints = _greed.SumOddSides(_dice);
 
@@ -65,9 +65,9 @@ namespace UnitTest.GreedTests
         public void Given100PointsFromOnesAndFiftyPointsFromFivesAnd300PointsFromThreesScore450Points()
         {
             var expectedPoints = 450;
-            _mockedDiceScorer.Setup(mds => mds.ScoreOnes()).Returns(100);
-            _mockedDiceScorer.Setup(mds => mds.ScoreFives()).Returns(300);
-            _mockedDiceScorer.Setup(mds => mds.ScoreThrees()).Returns(50);
+            _mockedDiceScorer.Setup(mds => mds.ScoreOnes(_dice)).Returns(100);
+            _mockedDiceScorer.Setup(mds => mds.ScoreFives(_dice)).Returns(300);
+            _mockedDiceScorer.Setup(mds => mds.ScoreThrees(_dice)).Returns(50);
 
             var actualPoints = _greed.SumOddSides(_dice);
 
@@ -78,9 +78,9 @@ namespace UnitTest.GreedTests
         public void GivenZeroPointsFromOnesThreesAndFivesThenScoreZeroPoints()
         {
             var expectedPoints = 0;
-            _mockedDiceScorer.Setup(mds => mds.ScoreOnes()).Returns(0);
-            _mockedDiceScorer.Setup(mds => mds.ScoreFives()).Returns(0);
-            _mockedDiceScorer.Setup(mds => mds.ScoreThrees()).Returns(0);
+            _mockedDiceScorer.Setup(mds => mds.ScoreOnes(_dice)).Returns(0);
+            _mockedDiceScorer.Setup(mds => mds.ScoreFives(_dice)).Returns(0);
+            _mockedDiceScorer.Setup(mds => mds.ScoreThrees(_dice)).Returns(0);
 
             var actualPoints = _greed.SumOddSides(_dice);
 

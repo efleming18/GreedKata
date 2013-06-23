@@ -6,6 +6,30 @@ namespace GreedKata
 {
     public class DiceScorer : IDiceScorer
     {
+        public int ScoreFives(List<int> _diceRoll)
+        {
+            // TODO: Implement this method
+            throw new NotImplementedException();
+        }
+
+        public int ScoreTwos(List<int> _diceRoll)
+        {
+            // TODO: Implement this method
+            throw new NotImplementedException();
+        }
+
+        public int ScoreSixes(List<int> _diceRoll)
+        {
+            // TODO: Implement this method
+            throw new NotImplementedException();
+        }
+
+        public int ScoreFours(List<int> _diceRoll)
+        {
+            // TODO: Implement this method
+            throw new NotImplementedException();
+        }
+
         public int ScoreOnes(List<int> diceRoll)
         {
             var numberOfOnes = diceRoll.Count(dr => dr == 1);
@@ -20,42 +44,6 @@ namespace GreedKata
         public int ScoreThrees(List<int> diceRoll)
         {
             return 0;
-        }
-
-        public int ScoreFours()
-        {
-            // TODO: Implement this method
-            throw new NotImplementedException();
-        }
-
-        public int ScoreThrees()
-        {
-            // TODO: Implement this method
-            throw new NotImplementedException();
-        }
-
-        public int ScoreTwos()
-        {
-            // TODO: Implement this method
-            throw new NotImplementedException();
-        }
-
-        public int ScoreFives()
-        {
-            // TODO: Implement this method
-            throw new NotImplementedException();
-        }
-
-        public int ScoreOnes()
-        {
-            // TODO: Implement this method
-            throw new NotImplementedException();
-        }
-
-        public int ScoreSixes()
-        {
-            // TODO: Implement this method
-            throw new NotImplementedException();
         }
         
     }
