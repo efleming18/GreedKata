@@ -6,7 +6,7 @@ using NUnit.Framework;
 namespace AcceptanceTests
 {
     [TestFixture]
-    public class ScoreOnes
+    public class ScoreOnesFeature
     {
         private Greed _greed;
 

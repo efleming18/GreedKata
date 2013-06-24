@@ -7,7 +7,7 @@ using NUnit.Framework;
 namespace AcceptanceTests
 {
     [TestFixture]
-    class ScoreFives
+    class ScoreFivesFeature
     {
         private static List<int>[] DiceRollsWithLessThanThreeFives = { new List<int> { },
                                                                        new List<int> { 5 },
