@@ -16,6 +16,12 @@ namespace AcceptanceTests
             new List<int> { 5, 5 }
         };
 
+        private static readonly List<int>[] DiceRollsWithMoreThanThreeFives =
+        {
+            new List<int> { 5, 5, 5, 5 },
+            new List<int> { 5, 5, 5, 5, 5 }
+        };
+
         [Test]
         [TestCaseSource("DiceRollsWithLessThanThreeFives")]
         public void GivenLessThanThreeFives_WhenDiceAreRolled_ThenReturnZeroPoints(List<int> diceRoll)
@@ -32,6 +38,18 @@ namespace AcceptanceTests
         public void GivenOnlyThreeFives_WhenDiceAreRolled_ThenReturnFiveHundredPoints()
         {
             var diceRoll = new List<int> { 5, 5, 5 };
+            var diceScorer = new DiceScorer();
+            var greed = new Greed(diceScorer);
+
+            var actualPoints = greed.GetTotalPoints(diceRoll);
+
+            Assert.AreEqual(500, actualPoints);
+        }
+
+        [Test]
+        [TestCaseSource("DiceRollsWithMoreThanThreeFives")]
+        public void GivenMoreThanThreeFives_WhenDiceAreRolled_ThenReturnFiveHundredPoints(List<int> diceRoll)
+        {
             var diceScorer = new DiceScorer();
             var greed = new Greed(diceScorer);
 
