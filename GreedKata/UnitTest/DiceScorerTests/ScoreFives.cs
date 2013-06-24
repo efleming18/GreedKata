@@ -9,21 +9,27 @@ namespace UnitTest.DiceScorerTests
     [TestFixture]
     class ScoreFives
     {
-        private static readonly List<int>[] DiceRollsWithMoreThanThreeFives =
-        {
-            new List<int> { 5, 5, 5, 5 },
-            new List<int> { 5, 5, 5, 5, 5 }
-        };
-
+        //lol, we suck. Stray fives are worth 50 points!
         [Test]
-        public void GivenOneFive_ThenReturnZeroPoints()
+        public void GivenOneFive_ThenReturnFiftyPoints()
         {
             var diceToScore = new List<int> { 5, 0, 0, 0, 0 };
             var diceScorer = new DiceScorer();
 
             var actualValue = diceScorer.ScoreFives(diceToScore);
 
-            Assert.AreEqual(0, actualValue);
+            Assert.AreEqual(50, actualValue);
+        }
+
+        [Test]
+        public void GivenTwoFives_ThenReturnOneHundredPoints()
+        {
+            var diceToScore = new List<int> { 5, 5, 0, 0, 0 };
+            var diceScorer = new DiceScorer();
+
+            var actualValue = diceScorer.ScoreFives(diceToScore);
+
+            Assert.AreEqual(100, actualValue);
         }
 
         [Test]
@@ -38,13 +44,23 @@ namespace UnitTest.DiceScorerTests
         }
 
         [Test]
-        [TestCaseSource("DiceRollsWithMoreThanThreeFives")]
-        public void GivenMoreThanThreeFives_ThenReturnFiveHundredPoints(List<int> diceToScore)
+        public void GivenFourFives_ThenReturnFiveHundredAndFiftyPoints()
         {
+            var diceToScore = new List<int> { 5, 5, 5, 5 };
             var diceScorer = new DiceScorer();
             var actualValue = diceScorer.ScoreFives(diceToScore);
 
-            Assert.AreEqual(500, actualValue);
+            Assert.AreEqual(550, actualValue);
+        }
+
+        [Test]
+        public void GivenFiveFives_ThenReturnSixHundred()
+        {
+            var diceToScore = new List<int> { 5, 5, 5, 5, 5 };
+            var diceScorer = new DiceScorer();
+            var actualValue = diceScorer.ScoreFives(diceToScore);
+
+            Assert.AreEqual(600, actualValue);
         }
     }
 }

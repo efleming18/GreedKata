@@ -9,29 +9,29 @@ namespace AcceptanceTests
     [TestFixture]
     class ScoreFivesFeature
     {
-        private static readonly List<int>[] DiceRollsWithLessThanThreeFives =
-        {
-            new List<int> { },
-            new List<int> { 5 },
-            new List<int> { 5, 5 }
-        };
-
-        private static readonly List<int>[] DiceRollsWithMoreThanThreeFives =
-        {
-            new List<int> { 5, 5, 5, 5 },
-            new List<int> { 5, 5, 5, 5, 5 }
-        };
-
+        //lol, we suck. Stray fives are worth 50 points!
         [Test]
-        [TestCaseSource("DiceRollsWithLessThanThreeFives")]
-        public void GivenLessThanThreeFives_WhenDiceAreRolled_ThenReturnZeroPoints(List<int> diceRoll)
+        public void GivenOnlyOneFive_WhenDiceAreRolled_ThenReturnFiftyPoints()
         {
+            var diceToScore = new List<int> { 5 };
             var diceScorer = new DiceScorer();
             var greed = new Greed(diceScorer);
 
-            var actualPoints = greed.GetTotalPoints(diceRoll);
+            var actualPoints = greed.GetTotalPoints(diceToScore);
 
-            Assert.AreEqual(0, actualPoints);
+            Assert.AreEqual(50, actualPoints);
+        }
+
+        [Test]
+        public void GivenOnlyTwoFives_WhenDiceAreRolled_ThenReturnOneHundredPoints()
+        {
+            var diceToScore = new List<int> { 5, 5 };
+            var diceScorer = new DiceScorer();
+            var greed = new Greed(diceScorer);
+
+            var actualPoints = greed.GetTotalPoints(diceToScore);
+
+            Assert.AreEqual(100, actualPoints);
         }
 
         [Test]
@@ -47,15 +47,27 @@ namespace AcceptanceTests
         }
 
         [Test]
-        [TestCaseSource("DiceRollsWithMoreThanThreeFives")]
-        public void GivenMoreThanThreeFives_WhenDiceAreRolled_ThenReturnFiveHundredPoints(List<int> diceRoll)
+        public void GivenOnlyFourFives_WhenDiceAreRolled_ThenReturnFiveHundredAndFiftyPoints()
         {
+            var diceToScore = new List<int> { 5, 5, 5, 5 };
             var diceScorer = new DiceScorer();
             var greed = new Greed(diceScorer);
 
-            var actualPoints = greed.GetTotalPoints(diceRoll);
+            var actualPoints = greed.GetTotalPoints(diceToScore);
 
-            Assert.AreEqual(500, actualPoints);
+            Assert.AreEqual(550, actualPoints);
+        }
+
+        [Test]
+        public void GivenOnlyFiveFives_WhenDiceAreRolled_ThenReturnSixHundredPoints()
+        {
+            var diceToScore = new List<int> { 5, 5, 5, 5, 5 };
+            var diceScorer = new DiceScorer();
+            var greed = new Greed(diceScorer);
+
+            var actualPoints = greed.GetTotalPoints(diceToScore);
+
+            Assert.AreEqual(600, actualPoints);
         }
     }
 }
