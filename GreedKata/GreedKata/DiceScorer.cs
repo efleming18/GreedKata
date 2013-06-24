@@ -8,7 +8,13 @@ namespace GreedKata
     {
         public int ScoreFives(List<int> _diceRoll)
         {
-            return 0;
+            var numberOfFives = _diceRoll.Count(dr => dr == 5);
+            var total = 0;
+            if (numberOfFives == 3)
+            {
+                total = 500;
+            }
+            return total;
         }
 
         public int ScoreTwos(List<int> _diceRoll)
@@ -44,9 +50,9 @@ namespace GreedKata
         {
             var numberOfThrees = diceRoll.Count(dr => dr == 3);
             var total = 0;
-            if (numberOfThrees == 3)
+            if (numberOfThrees >= 3)
             {
-                total = numberOfThrees * 100;
+                total = 300;
             }
             return total;
         }

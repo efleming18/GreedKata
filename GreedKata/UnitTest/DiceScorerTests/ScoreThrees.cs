@@ -40,14 +40,16 @@ namespace UnitTest.DiceScorerTests
         }
 
         //Do you think we should write all of the acceptance tests for the entire feature?
+        //Yes! I do think so. The only thing is that maybe we have too much going on?
+        //I like the ATDD style but I also like just the TDD style. I think just having ATDD style would cover both but since we have alot from the TDD we started 
+        //it may be difficult to kind of split them apart? I just feel too repetitive with the tests.
+
         //That would probably avoid overlooking test cases since we would still have failing tests.
         //However, we might lose a bit of focus since we don't have one clear acceptance test to make pass.
 
         //Or do you not like the acceptance tests? You seems to be forgetting about them here
         //but you seem to like them with the javaScript. My guess was that you are just running tests from
-        //the unit test project so you aren't seeing them?
-
-        //Whatever works for me =D
+        //Haha I honestly didn't even notice we had them. For some reason the shortcut for RUN ALL TESTS wasn't getting the Acceptance tests as well. Sorry about that!
         [Test]
         [TestCaseSource("diceRollsWithMoreThanThreeThrees")]
         public void GivenMoreThanThreeThrees_WhenDiceAreRolled_ReturnThreeHundredPoints(List<int> diceToScore)

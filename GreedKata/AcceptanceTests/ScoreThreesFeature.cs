@@ -47,7 +47,7 @@ namespace AcceptanceTests
             var diceScorer = new DiceScorer();
             var greed = new Greed(diceScorer);
 
-            var actualPoints = greed.GetTotalPoints(new List<int> { 3 });
+            var actualPoints = greed.GetTotalPoints(new List<int> { 3, 3, 3, 3 });
             Assert.AreEqual(300, actualPoints);
         }
 
