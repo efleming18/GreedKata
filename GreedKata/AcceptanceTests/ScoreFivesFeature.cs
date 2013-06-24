@@ -9,10 +9,12 @@ namespace AcceptanceTests
     [TestFixture]
     class ScoreFivesFeature
     {
-        private static List<int>[] DiceRollsWithLessThanThreeFives = { new List<int> { },
-                                                                       new List<int> { 5 },
-                                                                       new List<int> { 5, 5 }
-                                                                     };
+        private static readonly List<int>[] DiceRollsWithLessThanThreeFives =
+        {
+            new List<int> { },
+            new List<int> { 5 },
+            new List<int> { 5, 5 }
+        };
 
         [Test]
         [TestCaseSource("DiceRollsWithLessThanThreeFives")]

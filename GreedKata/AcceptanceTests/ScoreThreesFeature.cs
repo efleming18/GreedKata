@@ -9,13 +9,17 @@ namespace AcceptanceTests
     [TestFixture]
     class ScoreThreesFeature
     {
-        private static List<int>[] diceRollsWithLessThanThreeThrees = { new List<int> { 3 },
-                                                                         new List<int>{ 3, 3 }
-                                                                      };
+        private static readonly List<int>[] diceRollsWithLessThanThreeThrees =
+        {
+            new List<int> { 3 },
+            new List<int> { 3, 3 }
+        };
 
-        private static List<int>[] diceRollsWithMoreThanThreeThrees = { new List<int> { 3, 3, 3, 3 },
-                                                                        new List<int> { 3, 3, 3, 3, 3 }
-                                                                      };
+        private static readonly List<int>[] diceRollsWithMoreThanThreeThrees =
+        {
+            new List<int> { 3, 3, 3, 3 },
+            new List<int> { 3, 3, 3, 3, 3 }
+        };
 
         [Test]
         [TestCaseSource("diceRollsWithLessThanThreeThrees")]
