@@ -49,6 +49,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="ScoreFives.cs" />
     <Compile Include="ScoreOnes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScoreThrees.cs" />
