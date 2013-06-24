@@ -8,8 +8,7 @@ namespace GreedKata
     {
         public int ScoreFives(List<int> _diceRoll)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            return 0;
         }
 
         public int ScoreTwos(List<int> _diceRoll)
