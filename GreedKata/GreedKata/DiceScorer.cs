@@ -10,9 +10,14 @@ namespace GreedKata
         {
             var numberOfFives = _diceRoll.Count(dr => dr == 5);
             var total = 0;
+            if (numberOfFives < 3)
+            {
+                total = numberOfFives * 50;
+            }
             if (numberOfFives >= 3)
             {
-                total = 500;
+                numberOfFives = numberOfFives - 3;
+                total = 500 + (numberOfFives * 50);
             }
             return total;
         }
