@@ -4,12 +4,13 @@ using System.Linq;
 using GreedKata;
 using NUnit.Framework;
 
-namespace AcceptanceTests
+namespace AcceptanceTests.SumOddSidesCompleteFeature
 {
     [TestFixture]
     class ScoreFivesFeature
     {
         //lol, we suck. Stray fives are worth 50 points!
+        //Good catch sir!
         [Test]
         public void GivenOnlyOneFive_WhenDiceAreRolled_ThenReturnFiftyPoints()
         {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using GreedKata;
 using NUnit.Framework;
 
-namespace AcceptanceTests
+namespace AcceptanceTests.SumOddSidesCompleteFeature
 {
     [TestFixture]
     public class ScoreOnesFeature

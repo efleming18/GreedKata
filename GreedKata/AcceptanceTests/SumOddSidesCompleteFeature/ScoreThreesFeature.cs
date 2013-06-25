@@ -4,7 +4,7 @@ using System.Linq;
 using GreedKata;
 using NUnit.Framework;
 
-namespace AcceptanceTests
+namespace AcceptanceTests.SumOddSidesCompleteFeature
 {
     [TestFixture]
     class ScoreThreesFeature

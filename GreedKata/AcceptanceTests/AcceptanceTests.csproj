@@ -49,10 +49,12 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="ScoreFivesFeature.cs" />
-    <Compile Include="ScoreOnesFeature.cs" />
+    <Compile Include="SumEvenSidesCompleteFeature\ScoreTwosFeature.cs" />
+    <Compile Include="SumOddSidesCompleteFeature\ScoreFivesFeature.cs" />
+    <Compile Include="SumOddSidesCompleteFeature\ScoreOnesFeature.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ScoreThreesFeature.cs" />
+    <Compile Include="SumOddSidesCompleteFeature\ScoreThreesFeature.cs" />
+    <Compile Include="SumOddSidesCompleteFeature\SumOddSidesFeature.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GreedKata\GreedKata.csproj">
