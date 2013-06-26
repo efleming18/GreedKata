@@ -45,11 +45,9 @@ namespace GreedKata
             return total;
         }
 
-        //Functions used in SumEvenSides
-        public int ScoreTwos(List<int> _diceRoll)
+        public int ScoreTwos(List<int> diceRoll)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            return 0;
         }
 
         public int ScoreFours(List<int> _diceRoll)
