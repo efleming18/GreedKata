@@ -45,8 +45,13 @@ namespace GreedKata
             return total;
         }
 
-        public int ScoreTwos(List<int> diceRoll)
+        public int ScoreTwos(List<int> _diceRoll)
         {
+            var numberOfTwos = _diceRoll.Count(dr => dr == 2);
+            if (numberOfTwos == 3)
+            {
+                return 200;
+            }
             return 0;
         }
 

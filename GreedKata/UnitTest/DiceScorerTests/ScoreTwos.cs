@@ -33,9 +33,8 @@ namespace UnitTest.DiceScorerTests
             var diceRolled = new List<int> { 2, 2, 2 };
 
             var diceScorer = new DiceScorer();
-            var greed = new Greed(diceScorer);
 
-            var actualPoints = greed.GetTotalPoints(diceRolled);
+            var actualPoints = diceScorer.ScoreTwos(diceRolled);
             Assert.AreEqual(200, actualPoints);
         }
     }
