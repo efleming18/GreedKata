@@ -57,14 +57,12 @@ namespace GreedKata
 
         public int ScoreFours(List<int> _diceRoll)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            return 0;
         } 
 
         public int ScoreSixes(List<int> _diceRoll)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            return 0;
         }       
     }
 }

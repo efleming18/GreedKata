@@ -33,7 +33,7 @@ namespace AcceptanceTests.SumEvenSidesCompleteFeature
         }
 
         [Test]
-        public void GivenExactlyTwoTwos_WhenOnlyTwosAreRolled_ThenReturnTwoHundredPoints()
+        public void GivenExactlyThreeTwos_WhenOnlyTwosAreRolled_ThenReturnTwoHundredPoints()
         {
             var diceRolled = new List<int> { 2, 2, 2 };
 
