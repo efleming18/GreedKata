@@ -57,6 +57,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="DiceScorerTests\ScoreFives.cs" />
+    <Compile Include="DiceScorerTests\ScoreFours.cs" />
     <Compile Include="DiceScorerTests\ScoreOnes.cs" />
     <Compile Include="DiceScorerTests\ScoreThrees.cs" />
     <Compile Include="DiceScorerTests\ScoreTwos.cs" />

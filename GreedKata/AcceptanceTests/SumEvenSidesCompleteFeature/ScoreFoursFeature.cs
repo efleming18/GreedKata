@@ -7,23 +7,23 @@ using NUnit.Framework;
 namespace AcceptanceTests.SumEvenSidesCompleteFeature
 {
     [TestFixture]
-    class ScoreTwosFeature
+    class ScoreFoursFeature
     {
-        private static readonly List<int>[] diceRollsWithLessThanTwoTwos =
+        private static readonly List<int>[] diceRollsWithLessThanFourFours =
         {
-            new List<int> { 2 },
-            new List<int> { 2, 2 }
+            new List<int> { 4 },
+            new List<int> { 4, 4 }
         };
 
-        private static readonly List<int>[] diceRollsWithMoreThanTwoTwos =
+        private static readonly List<int>[] diceRollsWithMoreThanFourFours =
         {
-            new List<int> { 2, 2, 2, 2 },
-            new List<int> { 2, 2, 2, 2, 2 }
+            new List<int> { 4, 4, 4, 4 },
+            new List<int> { 4, 4, 4, 4, 4 }
         };
 
         [Test]
-        [TestCaseSource("diceRollsWithLessThanTwoTwos")]
-        public void GivenLessThanThreeTwos_WhenOnlyTwosAreRolled_ThenReturnZeroPoints(List<int> diceRolled)
+        [TestCaseSource("diceRollsWithLessThanFourFours")]
+        public void GivenLessThanThreeFours_WhenOnlyFoursAreRolled_ThenReturnZeroPoints(List<int> diceRolled)
         {
             var diceScorer = new DiceScorer();
             var greed = new Greed(diceScorer);
@@ -33,7 +33,7 @@ namespace AcceptanceTests.SumEvenSidesCompleteFeature
         }
 
         [Test]
-        public void GivenExactlyThreeTwos_WhenOnlyTwosAreRolled_ThenReturnTwoHundredPoints()
+        public void GivenExactlyThreeFours_WhenOnlyFoursAreRolled_ThenReturnFourHundredPoints()
         {
             var diceRolled = new List<int> { 2, 2, 2 };
 
@@ -41,18 +41,18 @@ namespace AcceptanceTests.SumEvenSidesCompleteFeature
             var greed = new Greed(diceScorer);
 
             var actualPoints = greed.GetTotalPoints(diceRolled);
-            Assert.AreEqual(200, actualPoints);
+            Assert.AreEqual(400, actualPoints);
         }
 
         [Test]
-        [TestCaseSource("diceRollsWithMoreThanTwoTwos")]
-        public void GivenMoreThanTwoTwos_WhenOnlyTwosAreRolled_ThenReturnTwoHundredPoints(List<int> diceRolled)
+        [TestCaseSource("diceRollsWithMoreThanFourFours")]
+        public void GivenMoreThanFourFours_WhenOnlyFoursAreRolled_ThenReturnFourHundredPoints(List<int> diceRolled)
         {
             var diceScorer = new DiceScorer();
             var greed = new Greed(diceScorer);
 
             var actualPoints = greed.GetTotalPoints(diceRolled);
-            Assert.AreEqual(200, actualPoints);
+            Assert.AreEqual(400, actualPoints);
         }
     }
 }
