@@ -6,7 +6,6 @@ namespace GreedKata
 {
     public class DiceScorer : IDiceScorer
     {
-        //Functions used in SumOddSides
         public int ScoreOnes(List<int> diceRoll)
         {
             var numberOfOnes = diceRoll.Count(dr => dr == 1);
@@ -48,7 +47,7 @@ namespace GreedKata
         public int ScoreTwos(List<int> _diceRoll)
         {
             var numberOfTwos = _diceRoll.Count(dr => dr == 2);
-            if (numberOfTwos == 3)
+            if (numberOfTwos >= 3)
             {
                 return 200;
             }
