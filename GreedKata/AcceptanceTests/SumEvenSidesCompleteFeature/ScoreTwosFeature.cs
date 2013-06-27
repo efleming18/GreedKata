@@ -23,7 +23,7 @@ namespace AcceptanceTests.SumEvenSidesCompleteFeature
 
         [Test]
         [TestCaseSource("diceRollsWithLessThanTwoTwos")]
-        public void GivenLessThanTwoTwos_WhenOnlyTwosAreRolled_ThenReturnZeroPoints(Object diceRolled)
+        public void GivenLessThanThreeTwos_WhenOnlyTwosAreRolled_ThenReturnZeroPoints(Object diceRolled)
         {
             var diceScorer = new DiceScorer();
             var greed = new Greed(diceScorer);

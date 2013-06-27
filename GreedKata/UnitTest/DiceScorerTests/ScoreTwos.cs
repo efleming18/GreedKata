@@ -9,8 +9,15 @@ namespace UnitTest.DiceScorerTests
     [TestFixture]
     class ScoreTwos
     {
+        private static List<int>[] diceRollsWithLessThanThreeTwos = { 
+            new List<int> { }, 
+            new List<int> { 2 }, 
+            new List<int> { 2, 2 }
+        };
+
         [Test]
-        public void GivenOneTwo_ThenReturnZeroPoints()
+        [TestCaseSource("diceRollsWithLessThanThreeTwos")]
+        public void GivenLessThanThreeTwos_ThenReturnZeroPoints(List<int> diceRolls)
         {
             var diceToScore = new List<int> { 2 };
             var diceScorer = new DiceScorer();
