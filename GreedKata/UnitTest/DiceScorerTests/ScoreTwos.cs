@@ -15,6 +15,11 @@ namespace UnitTest.DiceScorerTests
             new List<int> { 2, 2 }
         };
 
+        private static List<int>[] diceRollsWithMoreThanThreeTwos = { 
+            new List<int> { 2, 2, 2, 2 }, 
+            new List<int> { 2, 2, 2, 2, 2 }
+        };
+
         [Test]
         [TestCaseSource("diceRollsWithLessThanThreeTwos")]
         public void GivenLessThanThreeTwos_ThenReturnZeroPoints(List<int> diceRolls)
@@ -35,6 +40,17 @@ namespace UnitTest.DiceScorerTests
             var diceScorer = new DiceScorer();
 
             var actualPoints = diceScorer.ScoreTwos(diceRolled);
+            Assert.AreEqual(200, actualPoints);
+        }
+
+        [Test]
+        [TestCaseSource("diceRollsWithMoreThanThreeTwos")]
+        public void GivenMoreThanThreeTwos_ThenReturnTwoHundredPoints(List<int> diceRoll)
+        {
+            var diceScorer = new DiceScorer();
+
+            var actualPoints = diceScorer.ScoreTwos(diceRoll);
+
             Assert.AreEqual(200, actualPoints);
         }
     }
