@@ -26,5 +26,17 @@ namespace UnitTest.DiceScorerTests
 
             Assert.AreEqual(0, actualValue);
         }
+
+        [Test]
+        public void GivenThreeTwos_ThenReturnTwoHundredPoints()
+        {
+            var diceRolled = new List<int> { 2, 2, 2 };
+
+            var diceScorer = new DiceScorer();
+            var greed = new Greed(diceScorer);
+
+            var actualPoints = greed.GetTotalPoints(diceRolled);
+            Assert.AreEqual(200, actualPoints);
+        }
     }
 }
