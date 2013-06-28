@@ -38,7 +38,7 @@ namespace GreedKata
             return StandardScoring(diceRoll, 4);
         } 
 
-        public int ScoreSixes(List<int> _diceRoll)
+        public int ScoreSixes(List<int> diceRoll)
         {
             return 0;
         }   
