@@ -35,7 +35,7 @@ namespace AcceptanceTests.SumEvenSidesCompleteFeature
         [Test]
         public void GivenExactlyThreeFours_WhenOnlyFoursAreRolled_ThenReturnFourHundredPoints()
         {
-            var diceRolled = new List<int> { 2, 2, 2 };
+            var diceRolled = new List<int> { 4, 4, 4 };
 
             var diceScorer = new DiceScorer();
             var greed = new Greed(diceScorer);
