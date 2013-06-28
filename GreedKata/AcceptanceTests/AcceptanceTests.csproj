@@ -50,6 +50,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="SumEvenSidesCompleteFeature\ScoreFoursFeature.cs" />
+    <Compile Include="SumEvenSidesCompleteFeature\ScoreSixesFeature.cs" />
     <Compile Include="SumEvenSidesCompleteFeature\ScoreTwosFeature.cs" />
     <Compile Include="SumOddSidesCompleteFeature\ScoreFivesFeature.cs" />
     <Compile Include="SumOddSidesCompleteFeature\ScoreOnesFeature.cs" />

@@ -59,6 +59,7 @@
     <Compile Include="DiceScorerTests\ScoreFives.cs" />
     <Compile Include="DiceScorerTests\ScoreFours.cs" />
     <Compile Include="DiceScorerTests\ScoreOnes.cs" />
+    <Compile Include="DiceScorerTests\ScoreSixes.cs" />
     <Compile Include="DiceScorerTests\ScoreThrees.cs" />
     <Compile Include="DiceScorerTests\ScoreTwos.cs" />
     <Compile Include="GreedTests\SumEvenSidesShould.cs" />
