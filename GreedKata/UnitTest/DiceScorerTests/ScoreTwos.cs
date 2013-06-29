@@ -66,7 +66,7 @@ namespace UnitTest.DiceScorerTests
         }
 
         [Test]
-        public void GivenSixeTwos_ThenReturnSixteenHundredPoints()
+        public void GivenSixTwos_ThenReturnSixteenHundredPoints()
         {
             var diceRolled = new List<int> { 2, 2, 2, 2, 2, 2 };
             var diceScorer = new DiceScorer();
