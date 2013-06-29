@@ -40,7 +40,7 @@ namespace GreedKata
 
         public int ScoreSixes(List<int> diceRoll)
         {
-            return 0;
+            return StandardScoring(diceRoll, 6);
         }   
     
         private int StandardScoring(List<int> diceRoll, int sideToScore)
