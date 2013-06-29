@@ -49,6 +49,11 @@ namespace UnitTest.DiceScorerTests
             Assert.AreEqual(400, actualPoints);
         }
 
+        //I only made the test above pass. Is that ok or should I have made them all pass? 
+        //Sorry about this weekend, I will for sure be checking in a lot tomorrow.
+        //Go ahead and make this pass and the next ones if you think that is the right way.
+        //It doesn't matter to me! I'm fine with either to get this puppy done.
+        //Also, I'm not sure if the bonus just applies to 2's or not lol I'm confused on those rules.
         [Test]
         public void GivenFiveTwos_ThenReturnEightHundredPoints()
         {

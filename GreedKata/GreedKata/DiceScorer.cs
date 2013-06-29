@@ -30,7 +30,9 @@ namespace GreedKata
 
         public int ScoreTwos(List<int> diceRoll)
         {
-            return StandardScoring(diceRoll, 2);
+            var standardScoringScore = StandardScoring(diceRoll, 2);
+            return standardScoringScore * 2;
+            //return StandardScoring(diceRoll, 2);
         }
 
         public int ScoreFours(List<int> diceRoll)
