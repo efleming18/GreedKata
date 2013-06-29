@@ -15,12 +15,6 @@ namespace AcceptanceTests.SumEvenSidesCompleteFeature
             new List<int> { 2, 2 }
         };
 
-        private static readonly List<int>[] diceRollsWithMoreThanTwoTwos =
-        {
-            new List<int> { 2, 2, 2, 2 },
-            new List<int> { 2, 2, 2, 2, 2 }
-        };
-
         [Test]
         [TestCaseSource("diceRollsWithLessThanTwoTwos")]
         public void GivenLessThanThreeTwos_WhenOnlyTwosAreRolled_ThenReturnZeroPoints(List<int> diceRolled)
@@ -44,15 +38,40 @@ namespace AcceptanceTests.SumEvenSidesCompleteFeature
             Assert.AreEqual(200, actualPoints);
         }
 
+        // Is four of a kind only for 2s?
         [Test]
-        [TestCaseSource("diceRollsWithMoreThanTwoTwos")]
-        public void GivenMoreThanTwoTwos_WhenOnlyTwosAreRolled_ThenReturnTwoHundredPoints(List<int> diceRolled)
+        public void GivenFourTwos_WhenOnlyTwosAreRolled_ThenReturnFourHundredPoints()
         {
+            var diceRolled = new List<int> { 2, 2, 2, 2 };
             var diceScorer = new DiceScorer();
             var greed = new Greed(diceScorer);
 
             var actualPoints = greed.GetTotalPoints(diceRolled);
-            Assert.AreEqual(200, actualPoints);
+            Assert.AreEqual(400, actualPoints);
+        }
+
+        // Is five of a kind only for 2s?
+        [Test]
+        public void GivenFiveTwos_WhenOnlyTwosAreRolled_ThenReturnEightHundredPoints()
+        {
+            var diceRolled = new List<int> { 2, 2, 2, 2, 2 };
+            var diceScorer = new DiceScorer();
+            var greed = new Greed(diceScorer);
+
+            var actualPoints = greed.GetTotalPoints(diceRolled);
+            Assert.AreEqual(800, actualPoints);
+        }
+
+        // Is six of a kind only for 2s?
+        [Test]
+        public void GivenSixTwos_WhenOnlyTwosAreRolled_ThenReturnSixteenHundredPoints()
+        {
+            var diceRolled = new List<int> { 2, 2, 2, 2, 2, 2 };
+            var diceScorer = new DiceScorer();
+            var greed = new Greed(diceScorer);
+
+            var actualPoints = greed.GetTotalPoints(diceRolled);
+            Assert.AreEqual(1600, actualPoints);
         }
     }
 }

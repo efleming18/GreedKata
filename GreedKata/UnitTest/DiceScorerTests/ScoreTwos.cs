@@ -15,11 +15,6 @@ namespace UnitTest.DiceScorerTests
             new List<int> { 2, 2 }
         };
 
-        private static List<int>[] diceRollsWithMoreThanThreeTwos = { 
-            new List<int> { 2, 2, 2, 2 }, 
-            new List<int> { 2, 2, 2, 2, 2 }
-        };
-
         [Test]
         [TestCaseSource("diceRollsWithLessThanThreeTwos")]
         public void GivenLessThanThreeTwos_ThenReturnZeroPoints(List<int> diceRolls)
@@ -44,14 +39,36 @@ namespace UnitTest.DiceScorerTests
         }
 
         [Test]
-        [TestCaseSource("diceRollsWithMoreThanThreeTwos")]
-        public void GivenMoreThanThreeTwos_ThenReturnTwoHundredPoints(List<int> diceRoll)
+        public void GivenFourTwos_ThenReturnFourHundredPoints()
         {
+            var diceRolled = new List<int> { 2, 2, 2, 2 };
             var diceScorer = new DiceScorer();
 
-            var actualPoints = diceScorer.ScoreTwos(diceRoll);
+            var actualPoints = diceScorer.ScoreTwos(diceRolled);
 
-            Assert.AreEqual(200, actualPoints);
+            Assert.AreEqual(400, actualPoints);
+        }
+
+        [Test]
+        public void GivenFiveTwos_ThenReturnEightHundredPoints()
+        {
+            var diceRolled = new List<int> { 2, 2, 2, 2, 2 };
+            var diceScorer = new DiceScorer();
+
+            var actualPoints = diceScorer.ScoreTwos(diceRolled);
+
+            Assert.AreEqual(800, actualPoints);
+        }
+
+        [Test]
+        public void GivenSixeTwos_ThenReturnSixteenHundredPoints()
+        {
+            var diceRolled = new List<int> { 2, 2, 2, 2, 2, 2 };
+            var diceScorer = new DiceScorer();
+
+            var actualPoints = diceScorer.ScoreTwos(diceRolled);
+
+            Assert.AreEqual(1600, actualPoints);
         }
     }
 }

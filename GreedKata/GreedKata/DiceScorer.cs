@@ -43,6 +43,8 @@ namespace GreedKata
             return StandardScoring(diceRoll, 6);
         }   
     
+        
+        
         private int StandardScoring(List<int> diceRoll, int sideToScore)
         {
             int numberOfTimesSideWasRolled = diceRoll.Count(die => die == sideToScore);
