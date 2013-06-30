@@ -8,6 +8,12 @@ namespace GreedKata
     {
         private readonly int _sizeOFSet = 3;
 
+        public int ScoreThreePairs(List<int> diceRoll)
+        {
+            // TODO: Implement this method
+            throw new NotImplementedException();
+        }
+
         public int ScoreOnes(List<int> diceRoll)
         {
             var extraMultiplyerForOnes = 10;
@@ -30,10 +36,18 @@ namespace GreedKata
 
         public int ScoreTwos(List<int> diceRoll)
         {
-            var standardScoringScore = StandardScoring(diceRoll, 2);
-            return standardScoringScore * 2;
-            //return StandardScoring(diceRoll, 2);
-        }
+            var numberOfTwosRolled = diceRoll.Count(die => die == 2);
+            var totalScore = StandardScoring(diceRoll, 2);
+            if (numberOfTwosRolled > 3)
+            {
+                totalScore = totalScore * 2;
+            }
+            if (numberOfTwosRolled > 4)
+            {
+                totalScore = totalScore * 2;
+            }
+            return totalScore;
+         }
 
         public int ScoreFours(List<int> diceRoll)
         {
@@ -45,8 +59,6 @@ namespace GreedKata
             return StandardScoring(diceRoll, 6);
         }   
     
-        
-        
         private int StandardScoring(List<int> diceRoll, int sideToScore)
         {
             int numberOfTimesSideWasRolled = diceRoll.Count(die => die == sideToScore);

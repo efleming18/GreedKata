@@ -57,6 +57,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SumOddSidesCompleteFeature\ScoreThreesFeature.cs" />
     <Compile Include="SumOddSidesCompleteFeature\SumOddSidesFeature.cs" />
+    <Compile Include="ThreePairsFeature.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GreedKata\GreedKata.csproj">
