@@ -14,15 +14,16 @@ namespace UnitTest.DiceScorerTests
         //Then the method names to be "ReturnWhateverValue".
         //Thoughts? I am open to discussion on this one!
         //By the way I wrote my article, are we going to set up a repo for articles or how should we manage them?
-        [Test]
-        public void ReturnTwelveHundredPoints()
-        {
-            var diceToScore = new List<int> { 1, 2, 3, 4, 5, 6 };
-            var diceScorer = new DiceScorer();
+        //Uncomment this test for your red, I got ahead of myself :)
+        //[Test]
+        //public void ReturnTwelveHundredPoints()
+        //{
+        //    var diceToScore = new List<int> { 1, 2, 3, 4, 5, 6 };
+        //    var diceScorer = new DiceScorer();
 
-            var actualValue = diceScorer.ScoreStraight(diceToScore);
+        //    var actualValue = diceScorer.ScoreStraight(diceToScore);
 
-            Assert.AreEqual(1200, actualValue);
-        }
+        //    Assert.AreEqual(1200, actualValue);
+        //}
     }
 }
