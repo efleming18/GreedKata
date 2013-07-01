@@ -19,10 +19,6 @@ namespace AcceptanceTests
             new List<int> { 2, 2, 6, 6, 3, 3 },
         };
 
-        // Its not a probably if we miss some checkins, as long as we are hitting
-        // enough of them to keep the habbit up :)
-
-        // life > kata time!
         [Test]
         [TestCaseSource("diceRollsWithTheePairs")]
         public void GivenThreePairs_WhenDiceAreRolled_ThenReturnEightHundredPoints(List<int> diceRolled)
