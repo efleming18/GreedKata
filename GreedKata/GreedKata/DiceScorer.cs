@@ -10,11 +10,12 @@ namespace GreedKata
 
         public int ScoreThreePairs(List<int> diceRoll)
         {
+            //This will find if there are 3 distinct numbers in the list. If so then it will return 800 points.
+            //The above comment will be removed, I just wrote it because it too me so long to come up with that...lol
             bool distinctValue = diceRoll.Distinct().Count() == 3;
             if (distinctValue)
                 return 800;
             return 0;
-                //dr => dr == 1 || dr == 2 || dr == 3 || dr == 4 || dr == 5 || dr == 6).Distinct().Count() == 3;
         }
 
         public int ScoreOnes(List<int> diceRoll)
