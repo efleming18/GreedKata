@@ -8,6 +8,12 @@ namespace GreedKata
     {
         private readonly int _sizeOFSet = 3;
 
+        public object ScoreStraight(List<int> diceRoll)
+        {
+            // TODO: Implement this method
+            throw new NotImplementedException();
+        }
+
         public int ScoreThreePairs(List<int> diceRoll)
         {
             //This will find if there are 3 distinct numbers in the list. If so then it will return 800 points.
