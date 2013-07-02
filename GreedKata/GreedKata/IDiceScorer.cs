@@ -17,5 +17,7 @@ namespace GreedKata
         int ScoreOnes(List<int> diceRoll);
 
         int ScoreThrees(List<int> diceRoll);
+
+        int ScoreStraight(List<int> diceRoll);
     }
 }

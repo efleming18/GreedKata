@@ -15,7 +15,11 @@ namespace GreedKata
 
         public int GetTotalPoints(List<int> diceRoll)
         {
-            return SumOddSides(diceRoll) + SumEvenSides(diceRoll) + _diceScorer.ScoreThreePairs(diceRoll);
+            if (_diceScorer.ScoreThreePairs(diceRoll) != 0 || _diceScorer.ScoreStraight(diceRoll) != 0)
+            {
+                return _diceScorer.ScoreThreePairs(diceRoll) + _diceScorer.ScoreStraight(diceRoll);
+            }
+            return SumOddSides(diceRoll) + SumEvenSides(diceRoll);
         }
 
         public int SumEvenSides(List<int> diceRoll)

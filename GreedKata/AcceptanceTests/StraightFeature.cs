@@ -11,17 +11,16 @@ namespace AcceptanceTests
     [TestFixture]
     class StraightFeature
     {
-        //Uncomment this for your red!
-        //[Test]
-        //public void GivenStraight_WhenDiceAreRolled_ThenReturnTwelveHundredPoints()
-        //{
-        //    var diceToScore = new List<int> { 1, 2, 3, 4, 5, 6 };
-        //    var diceScorer = new DiceScorer();
-        //    var greed = new Greed(diceScorer);
+        [Test]
+        public void GivenStraight_WhenDiceAreRolled_ThenReturnTwelveHundredPoints()
+        {
+            var diceToScore = new List<int> { 1, 2, 3, 4, 5, 6 };
+            var diceScorer = new DiceScorer();
+            var greed = new Greed(diceScorer);
 
-        //    var actualValue = greed.GetTotalPoints(diceToScore);
+            var actualValue = greed.GetTotalPoints(diceToScore);
 
-        //    Assert.AreEqual(1200, actualValue);
-        //}
+            Assert.AreEqual(1200, actualValue);
+        }
     }
 }

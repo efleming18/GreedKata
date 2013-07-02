@@ -8,16 +8,17 @@ namespace GreedKata
     {
         private readonly int _sizeOFSet = 3;
 
-        public object ScoreStraight(List<int> diceRoll)
+        public int ScoreStraight(List<int> diceRoll)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            if (diceRoll.Distinct().Count() == 6)
+            {
+                return 1200;
+            }
+            return 0;
         }
 
         public int ScoreThreePairs(List<int> diceRoll)
         {
-            // Sorry for the late check in!
-            // I will read your ATTD post tomorrow morning when I come in :)
             var pairs = 0;
             foreach (var dieSide in diceRoll.Distinct())
 	        {
