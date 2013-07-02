@@ -27,12 +27,7 @@ namespace GreedKata
                     pairs++;
                 }
 	        }
-
-            if (pairs >= 3)
-            {
-                return 800;
-            }
-            return 0;
+            return (pairs >= 3) ? 800 : 0;
         }
 
         public int ScoreOnes(List<int> diceRoll)
