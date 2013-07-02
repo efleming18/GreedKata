@@ -37,7 +37,7 @@ namespace UnitTest.DiceScorerTests
 
         [Test]
         [TestCaseSource("diceRollsWithThreeDistinctValuesButNotPairs")]
-        public void NotReturnTwelveHundredPoints(List<int> diceRolled)
+        public void NotReturnEightHundredPoints(List<int> diceRolled)
         {
             var diceScorer = new DiceScorer();
 
